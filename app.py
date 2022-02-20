@@ -68,7 +68,7 @@ def download():
 @app.route("/temp/video")
 def download_file():
 	try:
-		path = os.path.join(current_app.root_path, "temp/video/", info_dict["filename"])
+		path = os.path.join(f"{current_app.root_path}", "temp/video/", f"{info_dict['filename']}")
 		return send_file(path, as_attachment=True)
 	except Exception as e:
 		global msg
