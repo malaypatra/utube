@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1>Enter your URL here</h1>
+
+
+  <input type="text" id="msg" ><br>
+  <button onclick="displayMessage()">×Go×</button>
+
+
+<p id="showinputhere"></p>
+
+<script>
+function displayMessage(){
+    let themsg = document.getElementById("msg").value;
+    if (themsg){
+    location.href = "http://0.0.0.0:5000/process/?url="+ themsg;
+    }
+    else{
+        document.getElementById("showinputhere").innerHTML = "No url entered !";
+    }
+}
+</script>
+
+</body>
+</html>
